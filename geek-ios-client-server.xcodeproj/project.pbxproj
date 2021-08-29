@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B02FE73726D3CE0600E9BEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FE73626D3CE0600E9BEEB /* ViewController.swift */; };
+		B02FE73B26DBA00F00E9BEEB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FE73A26DBA00F00E9BEEB /* Session.swift */; };
+		B02FE74126DBA2FE00E9BEEB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FE74026DBA2FE00E9BEEB /* AuthViewController.swift */; };
+		B02FE74326DBA33800E9BEEB /* DisplayFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FE74226DBA33800E9BEEB /* DisplayFriendsViewController.swift */; };
+		B02FE74526DBC78E00E9BEEB /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FE74426DBC78D00E9BEEB /* FriendsAPI.swift */; };
 		B0B605BB26D2899E00482FD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B605BA26D2899E00482FD2 /* AppDelegate.swift */; };
 		B0B605BD26D2899E00482FD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B605BC26D2899E00482FD2 /* SceneDelegate.swift */; };
-		B0B605BF26D2899E00482FD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B605BE26D2899E00482FD2 /* ViewController.swift */; };
 		B0B605C226D2899E00482FD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B605C026D2899E00482FD2 /* Main.storyboard */; };
 		B0B605C426D289A200482FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B605C326D289A200482FD2 /* Assets.xcassets */; };
 		B0B605C726D289A200482FD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B605C526D289A200482FD2 /* LaunchScreen.storyboard */; };
@@ -24,10 +27,13 @@
 		1618317CF84026E6C731D731 /* Pods-geek-ios-client-server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geek-ios-client-server.release.xcconfig"; path = "Target Support Files/Pods-geek-ios-client-server/Pods-geek-ios-client-server.release.xcconfig"; sourceTree = "<group>"; };
 		668CAABBDCD77304AE11B2EB /* Pods-geek-ios-client-server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geek-ios-client-server.debug.xcconfig"; path = "Target Support Files/Pods-geek-ios-client-server/Pods-geek-ios-client-server.debug.xcconfig"; sourceTree = "<group>"; };
 		B02FE73626D3CE0600E9BEEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B02FE73A26DBA00F00E9BEEB /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B02FE74026DBA2FE00E9BEEB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B02FE74226DBA33800E9BEEB /* DisplayFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFriendsViewController.swift; sourceTree = "<group>"; };
+		B02FE74426DBC78D00E9BEEB /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
 		B0B605B726D2899E00482FD2 /* geek-ios-client-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "geek-ios-client-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B605BA26D2899E00482FD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0B605BC26D2899E00482FD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B0B605BE26D2899E00482FD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0B605C126D2899E00482FD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0B605C326D289A200482FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B605C626D289A200482FD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +73,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B02FE73826DB9BBE00E9BEEB /* vk-project */ = {
+			isa = PBXGroup;
+			children = (
+				B02FE73D26DBA0E800E9BEEB /* Modules */,
+				B02FE73926DB9CF800E9BEEB /* services */,
+			);
+			path = "vk-project";
+			sourceTree = "<group>";
+		};
+		B02FE73926DB9CF800E9BEEB /* services */ = {
+			isa = PBXGroup;
+			children = (
+				B02FE73A26DBA00F00E9BEEB /* Session.swift */,
+				B02FE74426DBC78D00E9BEEB /* FriendsAPI.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		B02FE73D26DBA0E800E9BEEB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B02FE73E26DBA0F500E9BEEB /* Auth */,
+				B02FE73F26DBA10B00E9BEEB /* Friends */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B02FE73E26DBA0F500E9BEEB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B02FE74026DBA2FE00E9BEEB /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B02FE73F26DBA10B00E9BEEB /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				B02FE74226DBA33800E9BEEB /* DisplayFriendsViewController.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
 		B0B605AE26D2899E00482FD2 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +140,6 @@
 				B0B605D026D28CEA00482FD2 /* homeworks */,
 				B0B605CF26D289D100482FD2 /* Resources */,
 				B0B605CE26D289BB00482FD2 /* App */,
-				B0B605BE26D2899E00482FD2 /* ViewController.swift */,
 			);
 			path = "geek-ios-client-server";
 			sourceTree = "<group>";
@@ -138,6 +186,7 @@
 		B0B605D626D2A1A900482FD2 /* 02 */ = {
 			isa = PBXGroup;
 			children = (
+				B02FE73826DB9BBE00E9BEEB /* vk-project */,
 				B02FE73626D3CE0600E9BEEB /* ViewController.swift */,
 			);
 			path = 02;
@@ -258,11 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B605D326D2904400482FD2 /* SendViewController.swift in Sources */,
+				B02FE74326DBA33800E9BEEB /* DisplayFriendsViewController.swift in Sources */,
 				B0B605D826D2A57F00482FD2 /* Singleton.swift in Sources */,
-				B0B605BF26D2899E00482FD2 /* ViewController.swift in Sources */,
 				B0B605D526D2906B00482FD2 /* DetailViewController.swift in Sources */,
+				B02FE73B26DBA00F00E9BEEB /* Session.swift in Sources */,
 				B02FE73726D3CE0600E9BEEB /* ViewController.swift in Sources */,
+				B02FE74526DBC78E00E9BEEB /* FriendsAPI.swift in Sources */,
 				B0B605BB26D2899E00482FD2 /* AppDelegate.swift in Sources */,
+				B02FE74126DBA2FE00E9BEEB /* AuthViewController.swift in Sources */,
 				B0B605BD26D2899E00482FD2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
