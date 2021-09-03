@@ -7,6 +7,9 @@
 
 import Foundation
 import Alamofire
+import DynamicJSON
+
+
 
 struct User {
     
@@ -35,6 +38,7 @@ final class PhotosAPI {
             print(response.result)
         }
     }
+}
     
     
     
@@ -59,29 +63,44 @@ final class PhotosAPI {
                 print(response.result)
             }
         }
-    
-
+    }
 final class FriendsAPI {
-    let baseURL = "https://api.vk.com/method"
+    
+    let baseUrl = "https://api.vk.com/method"
     let token = Session.shared.token
-    let clientID = Session.shared.userID
+    let userId = Session.shared.userId
     let version = "5.21"
     
-    func get_(complitetion: @escaping([User]?)->()) {
+    func getFriends(completion: @escaping([FriendDynamic])->()) {
+        
         let method = "/friends.get"
         let parameters: Parameters = [
-            "user_id": clientID,
-            "order" : "name",
-            "count": 1000,
-            "fields" : "photo_100, photo_50",
-            "access_token" : Session.shared.token,
+            "user_id": userId,
+            "order": "name",
+            "count": 5,
+            "fields": "photo_100, photo_50",
+            "access_token": Session.shared.token,
             "v": version]
-        let url = baseURL + method
+        let url = baseUrl + method
         
-        AF.request(url, method: .get, parameters: parameters).responseJSON{ response in
-            print(response.result)
+        AF.request(url, method: .get, parameters: parameters).responseJSON { response in
+            
+            print(response.data?.prettyJSON)
+            
+            guard let data = response.data else { return }
+            
+            do {
+                
+                guard let items = JSON(data).response.items.array else { return }
+                let friends = items.map { FriendDynamic(json: $0) }
+                
+    
+                completion(friends)
+                
+            } catch {
+                print(error)
+            }
+
         }
     }
 }
-
-

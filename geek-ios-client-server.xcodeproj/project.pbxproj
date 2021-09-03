@@ -20,6 +20,7 @@
 		B0B605D326D2904400482FD2 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B605D226D2904400482FD2 /* SendViewController.swift */; };
 		B0B605D526D2906B00482FD2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B605D426D2906B00482FD2 /* DetailViewController.swift */; };
 		B0B605D826D2A57F00482FD2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B605D726D2A57F00482FD2 /* Singleton.swift */; };
+		B0CD49B026DBD9D6003B134B /* data+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD49AF26DBD9D5003B134B /* data+json.swift */; };
 		FB22DA08E7E3CD91A772017C /* Pods_geek_ios_client_server.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32B2EF38E95556CE23DC453 /* Pods_geek_ios_client_server.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		B0B605D226D2904400482FD2 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		B0B605D426D2906B00482FD2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B0B605D726D2A57F00482FD2 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		B0CD49AF26DBD9D5003B134B /* data+json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "data+json.swift"; sourceTree = "<group>"; };
 		D32B2EF38E95556CE23DC453 /* Pods_geek_ios_client_server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geek_ios_client_server.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,19 +78,20 @@
 		B02FE73826DB9BBE00E9BEEB /* vk-project */ = {
 			isa = PBXGroup;
 			children = (
+				B0CD49AE26DBD963003B134B /* Extensions */,
 				B02FE73D26DBA0E800E9BEEB /* Modules */,
-				B02FE73926DB9CF800E9BEEB /* services */,
+				B02FE73926DB9CF800E9BEEB /* Services */,
 			);
 			path = "vk-project";
 			sourceTree = "<group>";
 		};
-		B02FE73926DB9CF800E9BEEB /* services */ = {
+		B02FE73926DB9CF800E9BEEB /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				B02FE73A26DBA00F00E9BEEB /* Session.swift */,
 				B02FE74426DBC78D00E9BEEB /* FriendsAPI.swift */,
 			);
-			path = services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B02FE73D26DBA0E800E9BEEB /* Modules */ = {
@@ -167,7 +170,7 @@
 		B0B605D026D28CEA00482FD2 /* homeworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0B605D626D2A1A900482FD2 /* 02 */,
+				B0B605D626D2A1A900482FD2 /* app */,
 				B0B605D126D28D6200482FD2 /* 01 */,
 			);
 			path = homeworks;
@@ -183,13 +186,21 @@
 			path = 01;
 			sourceTree = "<group>";
 		};
-		B0B605D626D2A1A900482FD2 /* 02 */ = {
+		B0B605D626D2A1A900482FD2 /* app */ = {
 			isa = PBXGroup;
 			children = (
 				B02FE73826DB9BBE00E9BEEB /* vk-project */,
 				B02FE73626D3CE0600E9BEEB /* ViewController.swift */,
 			);
-			path = 02;
+			path = app;
+			sourceTree = "<group>";
+		};
+		B0CD49AE26DBD963003B134B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0CD49AF26DBD9D5003B134B /* data+json.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				B02FE74326DBA33800E9BEEB /* DisplayFriendsViewController.swift in Sources */,
 				B0B605D826D2A57F00482FD2 /* Singleton.swift in Sources */,
 				B0B605D526D2906B00482FD2 /* DetailViewController.swift in Sources */,
+				B0CD49B026DBD9D6003B134B /* data+json.swift in Sources */,
 				B02FE73B26DBA00F00E9BEEB /* Session.swift in Sources */,
 				B02FE73726D3CE0600E9BEEB /* ViewController.swift in Sources */,
 				B02FE74526DBC78E00E9BEEB /* FriendsAPI.swift in Sources */,
