@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Realm (10.12.0):
+    - Realm/Headers (= 10.12.0)
+  - Realm/Headers (10.12.0)
+  - SwiftKeychainWrapper (4.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Realm
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Realm
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Realm: 32488213acb44660539c619d620cec1bac046166
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+
+PODFILE CHECKSUM: a8e228f598aad5467e57bbf7dab3bfe540257e1a
+
+COCOAPODS: 1.10.2
